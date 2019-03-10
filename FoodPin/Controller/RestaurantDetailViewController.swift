@@ -21,12 +21,28 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

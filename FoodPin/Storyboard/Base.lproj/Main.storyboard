@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qkO-pq-77Z">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="vJV-sy-lRI" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
@@ -244,7 +244,7 @@
                             <constraint firstItem="IGD-9H-dnf" firstAttribute="bottom" secondItem="qkO-pq-77Z" secondAttribute="bottom" id="1KQ-CD-ezk"/>
                             <constraint firstItem="qkO-pq-77Z" firstAttribute="leading" secondItem="IGD-9H-dnf" secondAttribute="leading" id="Gnl-7F-0EV"/>
                             <constraint firstItem="IGD-9H-dnf" firstAttribute="trailing" secondItem="qkO-pq-77Z" secondAttribute="trailing" id="Rvr-47-XF2"/>
-                            <constraint firstItem="qkO-pq-77Z" firstAttribute="top" secondItem="IGD-9H-dnf" secondAttribute="top" id="j5G-ak-YzS"/>
+                            <constraint firstItem="qkO-pq-77Z" firstAttribute="height" secondItem="5Lb-qY-M80" secondAttribute="height" id="r6b-Xs-Q4X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IGD-9H-dnf"/>
                     </view>
