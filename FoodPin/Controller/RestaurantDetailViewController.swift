@@ -21,12 +21,28 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.nameLabel.text = restaurant.name
         headerView.typeLabel.text = restaurant.type
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
+        
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,7 +51,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,8 +75,25 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             cell.descriptionLabel.text = restaurant.description
             cell.selectionStyle = .none
             return cell
+        case 3:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailSeparatorCell.self), for: indexPath) as! RestaurantDetailSeparatorCell
+            cell.titleLabel.text = "HOW TO GET HERE"
+            cell.selectionStyle = .none
+            return cell
+        case 4:
+            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+            cell.selectionStyle = .none
+            cell.configure(location: restaurant.location)
+            return cell
         default:
             fatalError("Failed to instantiate the table view cell for detail view controller")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            destinationController.restaurant = restaurant
         }
     }
 

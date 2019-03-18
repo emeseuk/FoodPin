@@ -39,6 +39,18 @@ class RestaurantTableViewController: UITableViewController {
 
         tableView.cellLayoutMarginsFollowReadableWidth = true
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        // Customize the navigation bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        if let customFont = UIFont(name: "Rubik-Regular", size: 40.0) {
+            navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.hidesBarsOnSwipe = true
     }
 
     // MARK: - Table view data source
@@ -65,58 +77,6 @@ class RestaurantTableViewController: UITableViewController {
         
         return cell
     }
-    
-    // MARK: - Table view delegate
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        // Create an option menu as an action sheet
-//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-//        
-//        if let popoverController = optionMenu.popoverPresentationController {
-//            if let cell = tableView.cellForRow(at: indexPath) {
-//                popoverController.sourceView = cell
-//                popoverController.sourceRect = cell.bounds
-//            }
-//        }
-//        
-//        // Add actions to the menu
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        optionMenu.addAction(cancelAction)
-//        
-//        // Add Call action
-//        let callActionHandler = { (action:UIAlertAction!) -> Void in
-//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alertMessage, animated: true, completion: nil)
-//        }
-//        
-//        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-////        optionMenu.addAction(callAction)
-//        
-//        // Determine the action tile by examining the status of restaurantIsVisited[indexPath.row]
-//        // If it is set to true, we set the title "Undo Check in".
-//        let checkActionTitle = (restaurantIsVisited[indexPath.row]) ? "Undo Check in" : "Check in"
-//        
-//        // Check-in action
-//        let checkInAction = UIAlertAction(title: checkActionTitle, style: .default, handler: {
-//            (action:UIAlertAction!) -> Void in
-//            
-//            let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-//            
-//            self.restaurantIsVisited[indexPath.row] = (self.restaurantIsVisited[indexPath.row]) ? false : true
-//            
-//            cell.heartImageView.isHidden = self.restaurantIsVisited[indexPath.row] ? false : true
-//        })
-////        optionMenu.addAction(checkInAction)
-//        
-//        // Display the menu
-////        present(optionMenu, animated: true, completion: nil)
-//        
-//        // Deselect the row
-//        tableView.deselectRow(at: indexPath, animated: false)
-//    }
-
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
