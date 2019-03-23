@@ -12,6 +12,7 @@ class ReviewViewController: UIViewController {
 
     @IBOutlet var backgroundImageView: UIImageView!
     @IBOutlet var rateButtons: [UIButton]!
+    @IBOutlet var closeButton: UIButton!
     
     var restaurant = Restaurant()
     
@@ -26,27 +27,34 @@ class ReviewViewController: UIViewController {
         blurEffectView.frame = view.bounds
         backgroundImageView.addSubview(blurEffectView)
         
-        // Make the button invisible
+        let moveRightTransform = CGAffineTransform.init(translationX: 600, y: 0)
+        let moveDownTransform = CGAffineTransform.init(translationX: 0, y: -100)
+        
+        let scaleUpTransform = CGAffineTransform.init(scaleX: 5.0, y: 5.0)
+        let moveScaleTransform = scaleUpTransform.concatenating(moveRightTransform)
+        
+        // Make the button invisible and move off the screen
         for rateButton in rateButtons {
+            rateButton.transform = moveScaleTransform
             rateButton.alpha = 0
         }
+        
+        closeButton.transform = moveDownTransform
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 0.4, delay: 0.1, options: [], animations: {
-            self.rateButtons[0].alpha = 1.0
-        }, completion: nil)
-        UIView.animate(withDuration: 0.4, delay: 0.15, options: [], animations: {
-            self.rateButtons[1].alpha = 1.0
-        }, completion: nil)
-        UIView.animate(withDuration: 0.4, delay: 0.2, options: [], animations: {
-            self.rateButtons[2].alpha = 1.0
-        }, completion: nil)
-        UIView.animate(withDuration: 0.4, delay: 0.25, options: [], animations: {
-            self.rateButtons[3].alpha = 1.0
-        }, completion: nil)
+        var delay = 0.1
+
+        for rateButton in rateButtons {
+            delay += 0.05
+            UIView.animate(withDuration: 0.4, delay: delay, options: [], animations: {
+                rateButton.alpha = 1.0
+                rateButton.transform = .identity
+            }, completion: nil)
+        }
+        
         UIView.animate(withDuration: 0.4, delay: 0.3, options: [], animations: {
-            self.rateButtons[4].alpha = 1.0
+            self.closeButton.transform = .identity
         }, completion: nil)
     }
     
