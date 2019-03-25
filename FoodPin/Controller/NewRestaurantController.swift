@@ -15,6 +15,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.separatorStyle = .none
         // Configure navigation bar appearance
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -68,6 +69,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
+            
             let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
             let cameraAction = UIAlertAction(title: "Camera", style: .default, handler
                 : { (action) in
@@ -109,6 +111,27 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             photoImageView.contentMode = .scaleAspectFill
             photoImageView.clipsToBounds = true
         }
+        
+        let leadingConstraint = NSLayoutConstraint(
+            item: photoImageView, attribute: .leading, relatedBy: .equal,
+            toItem: photoImageView.superview, attribute: .leading,multiplier: 1, constant: 0)
+        leadingConstraint.isActive = true
+        
+        let trailingConstraint = NSLayoutConstraint(
+            item: photoImageView, attribute: .trailing, relatedBy: .equal,
+            toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        trailingConstraint.isActive = true
+        
+        let topConstraint = NSLayoutConstraint(
+            item: photoImageView, attribute: .top,relatedBy: .equal,
+            toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        topConstraint.isActive = true
+        
+        let bottomConstraint = NSLayoutConstraint(
+            item: photoImageView, attribute: .bottom, relatedBy: .equal,
+            toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        bottomConstraint.isActive = true
+        
         dismiss(animated: true, completion: nil)
     }
 
