@@ -598,9 +598,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="pZd-aI-iGC">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sAb-OO-srz">
-                                <rect key="frame" x="-23" y="-15" width="20" height="22"/>
+                                <rect key="frame" x="339" y="11" width="20" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="save"/>
+                                <connections>
+                                    <action selector="saveTappedButton:" destination="vV0-PO-SnF" eventType="touchUpInside" id="d8V-iw-29x"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>

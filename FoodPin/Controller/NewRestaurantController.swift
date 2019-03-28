@@ -134,5 +134,21 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         
         dismiss(animated: true, completion: nil)
     }
-
+    
+    @IBAction func saveTappedButton(_ sender: Any) {
+        if !(nameTextField.text?.isEmpty)! && !(phoneTextField.text?.isEmpty)! && !(addressTextField.text?.isEmpty)! && !(typeTextField.text?.isEmpty)!{
+            print("Name: \(String(describing: nameTextField.text))")
+            print("Type: \(String(describing: typeTextField.text))")
+            print("Phone: \(String(describing: phoneTextField.text))")
+            print("Address: \(String(describing: addressTextField.text))")
+            print("Desciption: \(String(describing: descriptionTextView.text))")
+        } else {
+            let saveDialog = UIAlertController.init(title: "Oooops", message: "We can't protect blablabla", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            saveDialog.addAction(okAction)
+            present(saveDialog, animated: true,completion: nil)
+        }
+        
+    }
+    
 }
