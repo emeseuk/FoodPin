@@ -31,7 +31,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         //searchBar
         searchController = UISearchController(searchResultsController: nil)
-        self.navigationItem.searchController = searchController
+        tableView.tableHeaderView = searchController.searchBar
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         
