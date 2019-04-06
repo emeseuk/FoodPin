@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet var photoImageView: UIImageView!
-
+    var restaurant : RestaurantMO!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -142,12 +144,29 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             print("Phone: \(String(describing: phoneTextField.text))")
             print("Address: \(String(describing: addressTextField.text))")
             print("Desciption: \(String(describing: descriptionTextView.text))")
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext
+                )
+                restaurant.name = nameTextField.text
+                restaurant.type = typeTextField.text
+                restaurant.location = addressTextField.text
+                restaurant.phone = phoneTextField.text
+                restaurant.summary = descriptionTextView.text
+                restaurant.isVisited = false
+                if let restaurantImage = photoImageView.image {
+                    restaurant.image = restaurantImage.pngData()
+                }
+                print("Saving data to context ...")
+                appDelegate.saveContext()
+            }
         } else {
             let saveDialog = UIAlertController.init(title: "Oooops", message: "We can't protect blablabla", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             saveDialog.addAction(okAction)
             present(saveDialog, animated: true,completion: nil)
         }
+        
+        dismiss(animated: true, completion: nil)
         
     }
     
