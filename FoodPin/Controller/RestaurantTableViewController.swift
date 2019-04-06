@@ -111,8 +111,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPat
-        h) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if searchController.isActive {
             return false
         } else {
