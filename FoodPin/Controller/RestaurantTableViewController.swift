@@ -13,6 +13,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     var restaurants : [RestaurantMO] = []
     var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+    var searchController: UISearchController!
     
     @IBOutlet var emptyRestaurantView: UIView!
     
@@ -25,6 +26,9 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         // Prepare the empty view
         tableView.backgroundView = emptyRestaurantView
         tableView.backgroundView?.isHidden = true
+        
+        searchController = UISearchController(searchResultsController: nil)
+        self.navigationItem.searchController = searchController
         
         // Customize the navigation bar
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
