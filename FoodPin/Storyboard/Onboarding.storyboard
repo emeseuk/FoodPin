@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="-865" y="-1123"/>
         </scene>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="3Q9-fL-pnt">
             <objects>
-                <viewController id="M9L-1X-cMF" sceneMemberID="viewController">
+                <viewController id="M9L-1X-cMF" customClass="WalkthroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jvz-gB-UX3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Gt-OR-eJr"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="ncf-Vc-5OM" id="vbx-Kw-8xp"/>
+                        <outlet property="pageControl" destination="U8q-uj-ldN" id="OGW-sL-VCJ"/>
+                        <outlet property="skipButton" destination="PGL-fJ-Y9u" id="jQ8-NL-6Y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEh-FU-0bl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
