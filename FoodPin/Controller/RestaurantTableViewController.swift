@@ -103,14 +103,14 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         let restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
         
         // Configure the cell...
-        cell.nameLabel.text = restaurants[indexPath.row].name
+        cell.nameLabel.text = restaurant.name
         
-        if let restaurantImage = restaurants[indexPath.row].image {
+        if let restaurantImage = restaurant.image {
             cell.thumbnailImageView.image = UIImage(data: restaurantImage as Data)
         }
-        cell.locationLabel.text = restaurants[indexPath.row].location
-        cell.typeLabel.text = restaurants[indexPath.row].type
-        cell.heartImageView.isHidden = restaurants[indexPath.row].isVisited ? false : true
+        cell.locationLabel.text = restaurant.location
+        cell.typeLabel.text = restaurant.type
+        cell.heartImageView.isHidden = restaurant.isVisited ? false : true
         
         return cell
     }
@@ -196,6 +196,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
                 destinationController.restaurant = (searchController.isActive) ? searchResults[indexPath.row] : restaurants[indexPath.row]
+                print(destinationController.restaurant)
             }
         }
     }
@@ -238,10 +239,11 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     //Search
     func filterContent(for searchText: String) {
         searchResults = restaurants.filter({ (restaurant) -> Bool in
-            if let name = restaurant.name {
-                let isMatch = name.localizedCaseInsensitiveContains(searchText)
+            if let name = restaurant.name, let location = restaurant.location {
+                let isMatch = name.localizedCaseInsensitiveContains(searchText) || location.localizedCaseInsensitiveContains(searchText)
                 return isMatch
             }
+
             return false
         })
     }
