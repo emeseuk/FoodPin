@@ -17,10 +17,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Walkthrough Content View Controller-->
         <scene sceneID="Ei7-1y-hxt">
             <objects>
-                <viewController id="VJn-sG-yve" sceneMemberID="viewController">
+                <viewController id="VJn-sG-yve" customClass="WalkthroughContentViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GDq-an-Ec7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="451"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,15 +66,20 @@
                         <viewLayoutGuide key="safeArea" id="3C6-kZ-tYj"/>
                     </view>
                     <size key="freeformSize" width="375" height="451"/>
+                    <connections>
+                        <outlet property="contentImageView" destination="cuc-p6-me9" id="F4R-DZ-AaQ"/>
+                        <outlet property="headingLabel" destination="uCE-w1-izJ" id="Huw-H2-HY6"/>
+                        <outlet property="subHeadingLabel" destination="G2J-vL-zKY" id="Olb-lP-C9D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RON-S4-J2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1582" y="-1122"/>
         </scene>
-        <!--Page View Controller-->
+        <!--Walkthrough Page View Controller-->
         <scene sceneID="ox4-ba-KhO">
             <objects>
-                <pageViewController storyboardIdentifier="WalkthroughController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G4H-5e-ooz" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="WalkthroughPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="G4H-5e-ooz" customClass="WalkthroughPageViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4P-Y8-8dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-865" y="-1123"/>
