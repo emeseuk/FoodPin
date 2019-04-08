@@ -8,7 +8,11 @@
 
 import UIKit
 
-class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource {
+protocol WalkthroughPageViewControllerDelegate: class {
+    func didUpdatePageIndex(currentIndex: Int)
+}
+
+class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
     var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
@@ -16,12 +20,15 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         "Search and locate your favourite restaurant on Maps",
         "Find restaurants shared by your friends and other foodies"]
     var currentIndex = 0
+    
+    weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Set the data source to itself
         dataSource = self
+        delegate = self
         
         // Create the first walkthrough screen
         if let startingViewController = contentViewController(at: 0) {
@@ -40,6 +47,15 @@ class WalkthroughPageViewController: UIPageViewController, UIPageViewControllerD
         var index = (viewController as! WalkthroughContentViewController).index
         index += 1
         return contentViewController(at: index)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
+                currentIndex = contentViewController.index
+                walkthroughDelegate?.didUpdatePageIndex(currentIndex: contentViewController.index)
+            }
+        }
     }
     
     func contentViewController(at index: Int) -> WalkthroughContentViewController? {
