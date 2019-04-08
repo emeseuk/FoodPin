@@ -13,6 +13,8 @@
 		E61C6444225A63A100D537A7 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */; };
 		E61C6446225A6D5E00D537A7 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */; };
 		E61C6448225A6FAC00D537A7 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */; };
+		E6277161225BECAC00AD4AB6 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277160225BECAC00AD4AB6 /* About.storyboard */; };
+		E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277162225BED0500AD4AB6 /* Discover.storyboard */; };
 		E64772092237C4C4003851B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64772082237C4C4003851B1 /* MapKit.framework */; };
 		E647720B2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647720A2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift */; };
 		E647720D2237EEC3003851B1 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647720C2237EEC3003851B1 /* RestaurantDetailMapCell.swift */; };
@@ -53,6 +55,8 @@
 		E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		E6277160225BECAC00AD4AB6 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		E6277162225BED0500AD4AB6 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		E64772082237C4C4003851B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E647720A2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeparatorCell.swift; sourceTree = "<group>"; };
 		E647720C2237EEC3003851B1 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
@@ -148,9 +152,11 @@
 		E65F725E222ADDD5002F3633 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E6277160225BECAC00AD4AB6 /* About.storyboard */,
 				F44705B6211AF99F002E0327 /* LaunchScreen.storyboard */,
 				F44705B1211AF99E002E0327 /* Main.storyboard */,
 				E60F7118225A21E2004F9E2E /* Onboarding.storyboard */,
+				E6277162225BED0500AD4AB6 /* Discover.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -292,6 +298,7 @@
 				E65F7273222AF4B3002F3633 /* Rubik-Regular.ttf in Resources */,
 				F44705B8211AF99F002E0327 /* LaunchScreen.storyboard in Resources */,
 				E65F726D222AF4B3002F3633 /* Rubik-BlackItalic.ttf in Resources */,
+				E6277161225BECAC00AD4AB6 /* About.storyboard in Resources */,
 				F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */,
 				E65F7270222AF4B3002F3633 /* Rubik-Light.ttf in Resources */,
 				E65F726E222AF4B3002F3633 /* Rubik-MediumItalic.ttf in Resources */,
@@ -304,6 +311,7 @@
 				E65F726F222AF4B3002F3633 /* Rubik-Medium.ttf in Resources */,
 				E65F7271222AF4B3002F3633 /* Rubik-Bold.ttf in Resources */,
 				E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */,
+				E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
