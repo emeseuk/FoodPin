@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class AboutTableViewController: UITableViewController {
 
@@ -59,5 +60,31 @@ class AboutTableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let link = sectionContent[indexPath.section][indexPath.row].link
+        switch indexPath.section {
+            
+        // Leave us feedback section
+        case 0:
+            if indexPath.row == 0 {
+                if let url = URL(string: link) {
+                    UIApplication.shared.open(url)
+                }
+            } else if indexPath.row == 1 {
+                performSegue(withIdentifier: "showWebView", sender: self)
+            }
+        default:
+            break
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showWebView" {
+            if let destinationController = segue.destination as? WebViewController,
+                let indexPath = tableView.indexPathForSelectedRow {
+                destinationController.targetURL = sectionContent[indexPath.section][indexPath.row].link
+            }
+        }
+    }
 }

@@ -16,6 +16,8 @@
 		E6277161225BECAC00AD4AB6 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277160225BECAC00AD4AB6 /* About.storyboard */; };
 		E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277162225BED0500AD4AB6 /* Discover.storyboard */; };
 		E6277165225BEE5400AD4AB6 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */; };
+		E6277167225CD86E00AD4AB6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277166225CD86E00AD4AB6 /* WebViewController.swift */; };
+		E6277169225CE15500AD4AB6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6277168225CE15400AD4AB6 /* WebKit.framework */; };
 		E64772092237C4C4003851B1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E64772082237C4C4003851B1 /* MapKit.framework */; };
 		E647720B2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647720A2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift */; };
 		E647720D2237EEC3003851B1 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E647720C2237EEC3003851B1 /* RestaurantDetailMapCell.swift */; };
@@ -59,6 +61,8 @@
 		E6277160225BECAC00AD4AB6 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E6277162225BED0500AD4AB6 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		E6277166225CD86E00AD4AB6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E6277168225CE15400AD4AB6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E64772082237C4C4003851B1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E647720A2237EE50003851B1 /* RestaurantDetailSeparatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailSeparatorCell.swift; sourceTree = "<group>"; };
 		E647720C2237EEC3003851B1 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6277169225CE15500AD4AB6 /* WebKit.framework in Frameworks */,
 				E64772092237C4C4003851B1 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +114,7 @@
 		E64772072237C4C4003851B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6277168225CE15400AD4AB6 /* WebKit.framework */,
 				E64772082237C4C4003851B1 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -126,6 +132,7 @@
 				E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */,
 				E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */,
 				E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */,
+				E6277166225CD86E00AD4AB6 /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E65F7276222D5AEF002F3633 /* RestaurantDetailHeaderView.swift in Sources */,
+				E6277167225CD86E00AD4AB6 /* WebViewController.swift in Sources */,
 				E65F725A2229826E002F3633 /* Restaurant.swift in Sources */,
 				E6FC7D512241803300D03D7F /* ReviewViewController.swift in Sources */,
 				E647720D2237EEC3003851B1 /* RestaurantDetailMapCell.swift in Sources */,
