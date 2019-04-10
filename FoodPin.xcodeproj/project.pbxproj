@@ -41,6 +41,7 @@
 		E65F727E222EDE3F002F3633 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = E65F727C222EDE3F002F3633 /* map.png */; };
 		E65F728622359F90002F3633 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65F728522359F90002F3633 /* UIColor+Ext.swift */; };
 		E65F728822359FB1002F3633 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65F728722359FB1002F3633 /* UINavigationController+Ext.swift */; };
+		E6867DAE225E0D7900D1996A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6867DAD225E0D7900D1996A /* CloudKit.framework */; };
 		E6906B2322528C3D000AECD3 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E6906B2122528C3D000AECD3 /* FoodPin.xcdatamodeld */; };
 		E6FC7D512241803300D03D7F /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FC7D502241803300D03D7F /* ReviewViewController.swift */; };
 		F44705AE211AF99E002E0327 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F44705AD211AF99E002E0327 /* AppDelegate.swift */; };
@@ -86,6 +87,8 @@
 		E65F727C222EDE3F002F3633 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		E65F728522359F90002F3633 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		E65F728722359FB1002F3633 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		E6867DAC225E0CD600D1996A /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
+		E6867DAD225E0D7900D1996A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		E6906B2222528C3D000AECD3 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
 		E6FC7D502241803300D03D7F /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		F44705AA211AF99E002E0327 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6867DAE225E0D7900D1996A /* CloudKit.framework in Frameworks */,
 				E6277169225CE15500AD4AB6 /* WebKit.framework in Frameworks */,
 				E64772092237C4C4003851B1 /* MapKit.framework in Frameworks */,
 			);
@@ -114,6 +118,7 @@
 		E64772072237C4C4003851B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E6867DAD225E0D7900D1996A /* CloudKit.framework */,
 				E6277168225CE15400AD4AB6 /* WebKit.framework */,
 				E64772082237C4C4003851B1 /* MapKit.framework */,
 			);
@@ -226,6 +231,7 @@
 		F44705AC211AF99E002E0327 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				E6867DAC225E0CD600D1996A /* FoodPin.entitlements */,
 				E65F725F222AF45B002F3633 /* Resources */,
 				E65F725E222ADDD5002F3633 /* Storyboard */,
 				E65F725D222ADDA3002F3633 /* View */,
@@ -275,6 +281,12 @@
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
 								enabled = 1;
 							};
 						};
@@ -499,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72KYVGH2JW;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -506,7 +519,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emese.toth.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,6 +530,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 72KYVGH2JW;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -524,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appcoda.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emese.toth.FoodPin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
