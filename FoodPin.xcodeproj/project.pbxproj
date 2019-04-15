@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E60209E822651771006357F5 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60209E622651771006357F5 /* About.storyboard */; };
 		E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60F7118225A21E2004F9E2E /* Onboarding.storyboard */; };
 		E61215E7224819770008AAC7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E6224819770008AAC7 /* RoundedTextField.swift */; };
 		E61215E922490DE30008AAC7 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E822490DE30008AAC7 /* NewRestaurantController.swift */; };
 		E61C6444225A63A100D537A7 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */; };
 		E61C6446225A6D5E00D537A7 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */; };
 		E61C6448225A6FAC00D537A7 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */; };
-		E6277161225BECAC00AD4AB6 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277160225BECAC00AD4AB6 /* About.storyboard */; };
 		E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277162225BED0500AD4AB6 /* Discover.storyboard */; };
 		E6277165225BEE5400AD4AB6 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */; };
 		E6277167225CD86E00AD4AB6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277166225CD86E00AD4AB6 /* WebViewController.swift */; };
@@ -54,13 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E60209E722651771006357F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/About.storyboard; sourceTree = "<group>"; };
 		E60F7118225A21E2004F9E2E /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E61215E6224819770008AAC7 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E61215E822490DE30008AAC7 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
-		E6277160225BECAC00AD4AB6 /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		E6277162225BED0500AD4AB6 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		E6277166225CD86E00AD4AB6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
@@ -170,7 +170,7 @@
 		E65F725E222ADDD5002F3633 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E6277160225BECAC00AD4AB6 /* About.storyboard */,
+				E60209E622651771006357F5 /* About.storyboard */,
 				F44705B6211AF99F002E0327 /* LaunchScreen.storyboard */,
 				F44705B1211AF99E002E0327 /* Main.storyboard */,
 				E60F7118225A21E2004F9E2E /* Onboarding.storyboard */,
@@ -323,7 +323,6 @@
 				E65F7273222AF4B3002F3633 /* Rubik-Regular.ttf in Resources */,
 				F44705B8211AF99F002E0327 /* LaunchScreen.storyboard in Resources */,
 				E65F726D222AF4B3002F3633 /* Rubik-BlackItalic.ttf in Resources */,
-				E6277161225BECAC00AD4AB6 /* About.storyboard in Resources */,
 				F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */,
 				E65F7270222AF4B3002F3633 /* Rubik-Light.ttf in Resources */,
 				E65F726E222AF4B3002F3633 /* Rubik-MediumItalic.ttf in Resources */,
@@ -334,6 +333,7 @@
 				E65F727D222EDE3F002F3633 /* phone.png in Resources */,
 				F44705B3211AF99E002E0327 /* Main.storyboard in Resources */,
 				E65F726F222AF4B3002F3633 /* Rubik-Medium.ttf in Resources */,
+				E60209E822651771006357F5 /* About.storyboard in Resources */,
 				E65F7271222AF4B3002F3633 /* Rubik-Bold.ttf in Resources */,
 				E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */,
 				E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */,
@@ -376,6 +376,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E60209E622651771006357F5 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60209E722651771006357F5 /* Base */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
 		F44705B1211AF99E002E0327 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
