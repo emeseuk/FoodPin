@@ -108,7 +108,10 @@ class DiscoverTableViewController: UITableViewController {
         return cell
     }
 
+    // MARK: - Cloud
+    
     @objc func fetchRecordsFromCloud() {
+        
         // Remove existing records before refreshing
         restaurants.removeAll()
         tableView.reloadData()
@@ -125,16 +128,17 @@ class DiscoverTableViewController: UITableViewController {
         queryOperation.desiredKeys = ["name"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
+        
         queryOperation.recordFetchedBlock = { (record) -> Void in
             self.restaurants.append(record)
         }
-        queryOperation.queryCompletionBlock = { [unowned self] (cursor, error) -> Void
-            in
+        
+        queryOperation.queryCompletionBlock = { [unowned self] (cursor, error) -> Void in
             if let error = error {
-                print("Failed to get data from iCloud - \(error.localizedDescription)"
-                )
+                print("Failed to get data from iCloud - \(error.localizedDescription)")
                 return
             }
+            
             print("Successfully retrieve the data from iCloud")
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
@@ -146,10 +150,11 @@ class DiscoverTableViewController: UITableViewController {
                     }
                 }
             }
-            
         }
+        
         // Execute the query
         publicDatabase.add(queryOperation)
+        
     }
     
 }
