@@ -73,8 +73,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler
+            let photoSourceRequestController = UIAlertController(title: "", message: NSLocalizedString("Choose your photo source", comment: "Choose your photo source"), preferredStyle: .actionSheet)
+            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera"), style: .default, handler
                 : { (action) in
                     if UIImagePickerController.isSourceTypeAvailable(.camera) {
                         let imagePicker = UIImagePickerController()
@@ -84,7 +84,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                         self.present(imagePicker, animated: true, completion: nil)
                     }
             })
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: { (action) in
+            let photoLibraryAction = UIAlertAction(title: NSLocalizedString("Photo library", comment: "Photo library"), style: .default, handler: { (action) in
                     if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                         let imagePicker = UIImagePickerController()
                         imagePicker.delegate = self
@@ -190,8 +190,9 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 appDelegate.saveContext()
             }
         } else {
-            let saveDialog = UIAlertController.init(title: "Oooops", message: "We can't protect blablabla", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let saveDialog = UIAlertController.init(title: NSLocalizedString("Oooops", comment: "Oooops"),
+                                                    message: NSLocalizedString("We can't protect blablabla", comment: "We can't protect blablabla"), preferredStyle: .alert)
+            let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .cancel, handler: nil)
             saveDialog.addAction(okAction)
             present(saveDialog, animated: true,completion: nil)
         }
