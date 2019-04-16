@@ -10,13 +10,13 @@
 		E60209E822651771006357F5 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60209E622651771006357F5 /* About.storyboard */; };
 		E60209EE22660004006357F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60209EC22660004006357F5 /* InfoPlist.strings */; };
 		E60209F122660004006357F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60209EF22660004006357F5 /* Localizable.strings */; };
+		E60209F2226606AE006357F5 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60209F4226606AE006357F5 /* Discover.storyboard */; };
 		E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60F7118225A21E2004F9E2E /* Onboarding.storyboard */; };
 		E61215E7224819770008AAC7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E6224819770008AAC7 /* RoundedTextField.swift */; };
 		E61215E922490DE30008AAC7 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E822490DE30008AAC7 /* NewRestaurantController.swift */; };
 		E61C6444225A63A100D537A7 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */; };
 		E61C6446225A6D5E00D537A7 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */; };
 		E61C6448225A6FAC00D537A7 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */; };
-		E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6277162225BED0500AD4AB6 /* Discover.storyboard */; };
 		E6277165225BEE5400AD4AB6 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */; };
 		E6277167225CD86E00AD4AB6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6277166225CD86E00AD4AB6 /* WebViewController.swift */; };
 		E6277169225CE15500AD4AB6 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6277168225CE15400AD4AB6 /* WebKit.framework */; };
@@ -62,13 +62,14 @@
 		E60209EB2265179E006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
 		E60209ED22660004006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		E60209F022660004006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		E60209F3226606AE006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hant"; path = "zh-Hant.lproj/Discover.storyboard"; sourceTree = "<group>"; };
+		E60209F6226606CD006357F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Discover.strings; sourceTree = "<group>"; };
 		E60F7118225A21E2004F9E2E /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E61215E6224819770008AAC7 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E61215E822490DE30008AAC7 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		E61C6443225A63A100D537A7 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		E61C6445225A6D5E00D537A7 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		E61C6447225A6FAC00D537A7 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
-		E6277162225BED0500AD4AB6 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		E6277164225BEE5400AD4AB6 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		E6277166225CD86E00AD4AB6 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		E6277168225CE15400AD4AB6 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -181,7 +182,7 @@
 				F44705B6211AF99F002E0327 /* LaunchScreen.storyboard */,
 				F44705B1211AF99E002E0327 /* Main.storyboard */,
 				E60F7118225A21E2004F9E2E /* Onboarding.storyboard */,
-				E6277162225BED0500AD4AB6 /* Discover.storyboard */,
+				E60209F4226606AE006357F5 /* Discover.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -348,7 +349,7 @@
 				E60209E822651771006357F5 /* About.storyboard in Resources */,
 				E65F7271222AF4B3002F3633 /* Rubik-Bold.ttf in Resources */,
 				E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */,
-				E6277163225BED0500AD4AB6 /* Discover.storyboard in Resources */,
+				E60209F2226606AE006357F5 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +412,15 @@
 				E60209F022660004006357F5 /* zh-Hant */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		E60209F4226606AE006357F5 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60209F3226606AE006357F5 /* zh-Hant */,
+				E60209F6226606CD006357F5 /* en */,
+			);
+			name = Discover.storyboard;
 			sourceTree = "<group>";
 		};
 		F44705B1211AF99E002E0327 /* Main.storyboard */ = {
