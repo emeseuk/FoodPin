@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E60209E822651771006357F5 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60209E622651771006357F5 /* About.storyboard */; };
+		E60209EE22660004006357F5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60209EC22660004006357F5 /* InfoPlist.strings */; };
+		E60209F122660004006357F5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E60209EF22660004006357F5 /* Localizable.strings */; };
 		E60F7119225A21E2004F9E2E /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E60F7118225A21E2004F9E2E /* Onboarding.storyboard */; };
 		E61215E7224819770008AAC7 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E6224819770008AAC7 /* RoundedTextField.swift */; };
 		E61215E922490DE30008AAC7 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61215E822490DE30008AAC7 /* NewRestaurantController.swift */; };
@@ -58,6 +60,8 @@
 		E60209E92265179E006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/About.strings"; sourceTree = "<group>"; };
 		E60209EA2265179E006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		E60209EB2265179E006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		E60209ED22660004006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		E60209F022660004006357F5 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E60F7118225A21E2004F9E2E /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		E61215E6224819770008AAC7 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		E61215E822490DE30008AAC7 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				E65F727C222EDE3F002F3633 /* map.png */,
 				E65F727B222EDE3F002F3633 /* phone.png */,
 				F44705B9211AF99F002E0327 /* Info.plist */,
+				E60209EF22660004006357F5 /* Localizable.strings */,
+				E60209EC22660004006357F5 /* InfoPlist.strings */,
 				E6906B2122528C3D000AECD3 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
@@ -328,11 +334,13 @@
 				F44705B8211AF99F002E0327 /* LaunchScreen.storyboard in Resources */,
 				E65F726D222AF4B3002F3633 /* Rubik-BlackItalic.ttf in Resources */,
 				F44705B5211AF99F002E0327 /* Assets.xcassets in Resources */,
+				E60209F122660004006357F5 /* Localizable.strings in Resources */,
 				E65F7270222AF4B3002F3633 /* Rubik-Light.ttf in Resources */,
 				E65F726E222AF4B3002F3633 /* Rubik-MediumItalic.ttf in Resources */,
 				E65F7274222AF4B3002F3633 /* Rubik-LightItalic.ttf in Resources */,
 				E65F7272222AF4B3002F3633 /* Rubik-Italic.ttf in Resources */,
 				E65F727E222EDE3F002F3633 /* map.png in Resources */,
+				E60209EE22660004006357F5 /* InfoPlist.strings in Resources */,
 				E65F726B222AF4B3002F3633 /* Rubik-Black.ttf in Resources */,
 				E65F727D222EDE3F002F3633 /* phone.png in Resources */,
 				F44705B3211AF99E002E0327 /* Main.storyboard in Resources */,
@@ -387,6 +395,22 @@
 				E60209E92265179E006357F5 /* zh-Hant */,
 			);
 			name = About.storyboard;
+			sourceTree = "<group>";
+		};
+		E60209EC22660004006357F5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60209ED22660004006357F5 /* zh-Hant */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E60209EF22660004006357F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E60209F022660004006357F5 /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		F44705B1211AF99E002E0327 /* Main.storyboard */ = {
